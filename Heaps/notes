@@ -1,0 +1,41 @@
+Heap has two properties - Min Heap and Max Heap
+-> Min Heap : Parent Node hamesha child node se choti hogi
+-> Max Heap : Parent Node hamesha child node se badi hogi
+To traverse from child node to Parent Node, traverse from (ith index -> (i/2)th index)
+Parent Node to child node : left child -> 2*i, right child -> 2*i+1,
+    -> if indexing is 0-based then, left child -> 2*i+1, right child -> 2*i+2,
+-> Tree is way to just visualize Heap data structure. We implement Heap using array.
+
+Complete Binary Tree(Heap) : A binary tree is complete if all its levels, except possibly the last, are fully filled. 
+                       In the last level, all nodes are as far left as possible.
+      1
+    /   \
+   2     3
+  / \   /
+ 4   5 6
+
+Full Binary Tree : A binary tree is full if every node has either 0 or 2 children.
+                   This means each node is either a leaf node or has exactly two children.
+      1
+    /   \
+   2     3
+  / \   / \
+ 4   5 6   7
+
+Perfect Binary Tree : A binary tree is perfect if all its levels are fully filled, meaning every internal node has two children,
+                      and all leaf nodes are at the same level.
+      1
+    /   \
+   2     3
+  / \   / \
+ 4   5 6   7
+ 
+Time Complexities : 
+Insertion : O(log n) (Heapify)
+Deletion : O(log n)
+Find Max : O(1)
+Find Min : O(1)
+To create a heap from an array of size n : O(n) (Important)
+//last level ke rightmost element pe koi dependent nhi hota, isliye delete operation ke liye last level ke rightmost element ko root se swap karte hain
+
+(n/2)th index ---> nth index = leaf nodes
